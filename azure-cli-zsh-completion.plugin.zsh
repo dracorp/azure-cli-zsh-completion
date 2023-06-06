@@ -1,5 +1,5 @@
 autoload -U +X bashcompinit && bashcompinit
-if [[ $(uname -s)  == Darwin ]]; then
+if [[ $(uname -s)  == Darwin ]] || [[ $(command -v brew) ]]; then
     if [[ -r ${HOMEBREW_PREFIX}/etc/bash_completion.d/az ]]; then
         source ${HOMEBREW_PREFIX}/etc/bash_completion.d/az
     elif [[ -r /usr/local/opt/azure-cli/etc/bash_completion.d/az ]]; then
